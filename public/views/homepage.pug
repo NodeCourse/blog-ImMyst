@@ -10,14 +10,19 @@ html
             nav 
               ul(class="navbar")
                 li 
-                  a(href="") Home
+                  a(class="nav" href="") Home
                 li
-                  a(href="/Articles") Articles
+                  a(class="nav" href="/Articles") Articles
                 li 
-                  a(href="/write-article") Write an article
+                  a(class="nav" href="/write-article") Write an article
                   
             img(class="main-img" src="/img/main.jpg")
             div(class="title")
               h1 Welcome <br> To my Blog
             div(class="container")
               div(class="pres")
+                article If you want to add an article, just go to <b> write an article </b> in the menu or click down below.
+              center
+                a(href="/write-article")
+                  img(class="article-img" src="/img/article.png")
+                
