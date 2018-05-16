@@ -32,26 +32,26 @@ a {
   text-decoration: none;
 }
 
-a:link {
+a.nav:link {
   color: #f9f2ca;
   text-shadow: 1px 1px 5px black;
-  }
+}
 
-  a:visited {
+a.nav:visited {
     color: #f9f2ca;
     text-shadow: 1px 1px 5px black;
 
-  }
+}
 
-  a:hover {
+a.nav:hover {
     color: white;
     text-shadow: 1px 1px 5px black;
-  }
+}
 
-  a:active {
+a.nav:active {
     color: #f9f2ca;
     text-shadow: 1px 1px 5px black;
-  }
+}
 
 .main-img {
   margin-top: -25px;
@@ -70,4 +70,14 @@ h1 {
   font-size: 125px;
   color: #f9f2ca;
   text-shadow: 1px 1px 5px black
+}
+
+.container {
+  padding-top: 40px;
+  padding-left: 60px;
+  padding-right: 100px;
+}
+
+.article-img {
+  transform: scale(0.5);
 }
