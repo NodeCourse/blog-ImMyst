@@ -17,3 +17,6 @@ An article should have at least the `title` and `content` properties.
 10. List the articles
 7. Commit and push your changes
 8. Visit your GitHub repository to create a pull request
+
+
+-By Titouan.G

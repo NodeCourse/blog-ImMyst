@@ -1,28 +1,35 @@
 html
-    head
-        title My Blog
-        link(rel="stylesheet", href="/css/homepage.css")
-        link(href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet")
+  head
+    title My Blog
+    link(rel="stylesheet", href="/css/homepage.css")
+    link(href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet")
+  body
+    main
+      nav 
+        ul(class="navbar")
+          li 
+            a(class="nav" href="/") Home
+          li 
+            a(class="nav" href="/write-article") Write an article
 
-        link(href="./index.js")
-    body
-        main
-            nav 
-              ul(class="navbar")
-                li 
-                  a(class="nav" href="") Home
-                li
-                  a(class="nav" href="/Articles") Articles
-                li 
-                  a(class="nav" href="/write-article") Write an article
-                  
-            img(class="main-img" src="/img/main.jpg")
-            div(class="title")
-              h1 Welcome <br> To my Blog
-            div(class="container")
-              div(class="pres")
-                article If you want to add an article, just go to <b> write an article </b> in the menu or click down below.
-              center
-                a(href="/write-article")
-                  img(class="article-img" src="/img/article.png")
-                
+      img(class="main-img" src="/img/main.jpg")
+      div(class="title")
+        h1 Welcome <br> To my Blog
+      div(class="container")
+        center
+          a(href="/write-article")
+            img(class="article-img" src="/img/article.png")
+
+
+  for article in articles
+    article
+      h1 #{article.title}
+      p #{article.content}
+  form(method="POST")
+    p
+      strong Create a new article
+    label(for="title") Title
+    input(type="text", id="title", name="title", placeholder="Some Great Article Title")
+    label(for="content") Content
+    textarea(id="content", name="content", placeholder="Some great article content...")
+    button(type="submit") Post
