@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const Sequelize = require('sequelize');
 
-const db = new Sequelize('database', 'user', 'password', {
+const db = new Sequelize('blog_nodejs', 'user', 'YES', {
     host: 'localhost',
     dialect: 'mysql'
 });
@@ -11,6 +11,7 @@ const User = db.define('user', {
     fullname: { type: Sequelize.STRING },
     email: { type: Sequelize.STRING }
 });
+
 /*
 const Post = db.define('post', {
     title: { type: Sequelize.STRING }
